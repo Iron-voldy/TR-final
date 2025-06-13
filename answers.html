@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIIT IT1150 - Answer Keys & Study Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #667eea;
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .header h2 {
+            color: #764ba2;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .paper-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .nav-btn.active {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            transform: scale(1.05);
+        }
+        .answer-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+        .answer-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .question-block {
+            margin-bottom: 30px;
+            padding: 25px;
+            border: 2px solid #ecf0f1;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .question-block h3 {
+            color: #e74c3c;
+            margin-top: 0;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+        .answer {
+            background: #d4edda;
+            border: 2px solid #c3e6cb;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .explanation {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .method {
+            background: #cce5ff;
+            border: 2px solid #99d6ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .mcq-answer {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .sample-answer {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 20px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .tip-box {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .scoring-guide {
+            background: #e8f5e8;
+            border: 2px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .keyword {
+            background: #ff9800;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 SLIIT IT1150 Technical Writing</h1>
+            <h2>📚 Complete Answer Keys & Study Guide</h2>
+            <p><strong>Master Every Question Type with Detailed Explanations</strong></p>
+        </div>
+
+        <div class="tip-box">
+            💡 <strong>Study Strategy:</strong> Review each answer with its explanation, then practice the method on similar questions. Focus on understanding WHY each answer is correct!
+        </div>
+
+        <div class="paper-nav">
+            <button class="nav-btn active" onclick="showAnswers(1)">Paper 1 Answers</button>
+            <button class="nav-btn" onclick="showAnswers(2)">Paper 2 Answers</button>
+            <button class="nav-btn" onclick="showAnswers(3)">Paper 3 Answers</button>
+            <button class="nav-btn" onclick="showAnswers(4)">Paper 4 Answers</button>
+            <button class="nav-btn" onclick="showAnswers(5)">Paper 5 Answers</button>
+        </div>
+
+        <!-- PAPER 1 ANSWERS -->
+        <div class="answer-section active" id="answers1">
+            <h2 style="text-align: center; color: #e74c3c;">📋 Paper 1 - Technology Focus - Answer Key</h2>
+            
+            <div class="question-block">
+                <h3>Question 1A – Reading Comprehension: AI in Healthcare (15 marks)</h3>
+                
+                <p><strong>1. The main purpose of this passage is to:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Explain both benefits and challenges of AI in healthcare</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> The passage discusses both positive aspects (diagnostic accuracy, market growth) and negative aspects (privacy concerns, black box issues) of AI in healthcare, making it balanced coverage.
+                </div>
+                <div class="method">
+                    <strong>🎯 Method:</strong> Look for the passage structure. Introduction mentions "revolutionizing" (positive), middle discusses "challenges" (negative), conclusion mentions "obstacles" but also "adoption" (balanced).
+                </div>
+
+                <p><strong>2. According to the passage, AI systems can:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Detect diseases before symptoms appear</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> The passage specifically states "identify diabetic retinopathy in eye scans before symptoms appear."
+                </div>
+                <div class="method">
+                    <strong>🎯 Method:</strong> Scan for specific examples. Look for keywords like "before symptoms appear" which directly answers the question.
+                </div>
+
+                <p><strong>3. The term "black box" in the passage refers to:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> AI algorithms that are difficult to understand</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Context clues: "makes it difficult for medical professionals to understand how diagnoses are reached."
+                </div>
+                <div class="method">
+                    <strong>🎯 Method:</strong> Use contextual clues. The sentence explains what "black box" means immediately after introducing the term.
+                </div>
+
+                <p><strong>4. The projected market value of $45 billion by 2026 indicates:</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> Significant growth in AI healthcare adoption</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Large market value projection indicates growing adoption and investment in the field.
+                </div>
+
+                <p><strong>5. The author's tone towards AI in healthcare can be described as:</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> Balanced and cautious</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> The author presents both benefits and challenges without taking an extreme position, showing balance and caution.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 1B – Short Answer Questions (10 marks)</h3>
+                
+                <p><strong>6. Identify two specific challenges mentioned in the passage regarding AI implementation in healthcare. (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    Two specific challenges are:<br>
+                    1. <span class="keyword">Privacy concerns</span> when sensitive patient data is processed by automated systems<br>
+                    2. The <span class="keyword">"black box" nature</span> of AI algorithms makes it difficult for medical professionals to understand how diagnoses are reached, affecting trust and accountability
+                </div>
+                <div class="scoring-guide">
+                    <strong>🎯 Scoring Guide (5 marks):</strong><br>
+                    • 2.5 marks for each correctly identified challenge<br>
+                    • Must be specific challenges from the passage<br>
+                    • Accept: privacy concerns, black box nature, trust issues, accountability problems
+                </div>
+
+                <p><strong>7. According to the passage, what factors are driving the growth of the AI healthcare market? (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    The growth is driven by:<br>
+                    1. <span class="keyword">Need for cost-effective solutions</span><br>
+                    2. <span class="keyword">Improved patient outcomes</span>
+                </div>
+                <div class="scoring-guide">
+                    <strong>🎯 Scoring Guide (5 marks):</strong><br>
+                    • 2.5 marks for each factor<br>
+                    • Must be from the passage text<br>
+                    • Look for: "driven by the need for cost-effective solutions and improved patient outcomes"
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 2A – Reading Comprehension: Cybersecurity (15 marks)</h3>
+                
+                <p><strong>1. The phrase "attack surface" in the first paragraph means:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> The number of potential points for cyber attacks</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Context: "billions of devices connected to the internet, the attack surface...has expanded dramatically" indicates more connection points = more attack opportunities.
+                </div>
+
+                <p><strong>2. According to the passage, cyberattacks occur:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Every 39 seconds</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Direct quote from passage: "cyberattacks occur every 39 seconds."
+                </div>
+
+                <p><strong>3. Multi-factor authentication effectiveness is demonstrated by:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> 99.9% reduction in account compromises</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Specific statistic mentioned: "99.9% reduction in account compromises."
+                </div>
+
+                <p><strong>4. Social engineering attacks primarily target:</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> Human psychology</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Passage states: "exploit human psychology rather than technical vulnerabilities."
+                </div>
+
+                <p><strong>5. The passage suggests that cybersecurity is:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> An ongoing, evolving challenge</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "cybersecurity remains an evolving challenge" and "As defensive technologies advance, so do the sophistication of cyber threats."
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 2B – Short Answer Questions (10 marks)</h3>
+                
+                <p><strong>6. Explain why small businesses are particularly vulnerable to cyberattacks according to the passage. (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    Small businesses are particularly vulnerable because they have <span class="keyword">limited security resources</span>, as mentioned in the passage.
+                </div>
+                <div class="scoring-guide">
+                    <strong>🎯 Scoring Guide (5 marks):</strong><br>
+                    • 5 marks for correctly identifying "limited security resources"<br>
+                    • 3 marks for partial answer mentioning resource limitations<br>
+                    • Must reference the passage content
+                </div>
+
+                <p><strong>7. What does the passage suggest is necessary to maintain organizational security posture? (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    The passage suggests that <span class="keyword">ongoing employee training and awareness programs</span> are necessary to maintain organizational security posture.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 3 – Summary Writing (15 marks)</h3>
+                
+                <div class="answer">
+                    <strong>✅ Correct Answers:</strong><br>
+                    1. <span class="keyword">scalable</span><br>
+                    2. <span class="keyword">on-demand</span><br>
+                    3. <span class="keyword">expensive</span><br>
+                    4. <span class="keyword">IaaS</span><br>
+                    5. <span class="keyword">SaaS</span><br>
+                    6. <span class="keyword">control</span><br>
+                    7. <span class="keyword">security</span><br>
+                    8. <span class="keyword">enterprise-grade</span>
+                </div>
+                
+                <div class="scoring-guide">
+                    <strong>🎯 Scoring Guide (15 marks):</strong><br>
+                    • 2 marks for each correct word (8 × 2 = 16 marks, reduced to 15)<br>
+                    • Deduct 1 mark for each incorrect word<br>
+                    • Words must be exactly from the passage or word bank
+                </div>
+
+                <div class="method">
+                    <strong>🎯 Method for Summary Writing:</strong><br>
+                    1. Read the passage carefully first<br>
+                    2. Identify key concepts mentioned<br>
+                    3. Look at the sentence structure of the summary<br>
+                    4. Match grammatical requirements (noun/adjective/verb)<br>
+                    5. Ensure logical flow and meaning
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 4 – Process Description (25 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Answer (250-300 words):</strong><br><br>
+                    
+                    The Software Development Lifecycle (SDLC) is a systematic process used to design, develop, and maintain software applications efficiently. This structured approach ensures quality, reduces costs, and manages project timelines effectively.<br><br>
+                    
+                    <span class="keyword">Initially</span>, the process begins with Requirements Gathering, where stakeholders define functional and non-functional specifications. During this phase, project managers conduct meetings with clients to understand their needs and document detailed requirements.<br><br>
+                    
+                    <span class="keyword">Subsequently</span>, the System Design phase commences, where architects create technical specifications, database designs, and system architecture. This stage involves selecting appropriate technologies and designing user interfaces.<br><br>
+                    
+                    <span class="keyword">Following this</span>, the Implementation phase begins, where developers write code according to the design specifications. Programmers use various programming languages and frameworks to build the actual software components.<br><br>
+                    
+                    <span class="keyword">Next</span>, the Testing phase ensures software quality through various testing methods including unit testing, integration testing, and user acceptance testing. Quality assurance teams identify and report bugs for resolution.<br><br>
+                    
+                    <span class="keyword">After successful testing</span>, the Deployment phase involves installing the software in the production environment and making it available to end users. This includes server configuration and data migration.<br><br>
+                    
+                    <span class="keyword">Finally</span>, the Maintenance phase provides ongoing support, bug fixes, and feature enhancements. This cyclical phase continues throughout the software's lifecycle, often leading back to requirements gathering for new features or versions.
+                </div>
+
+                <div class="scoring-guide">
+                    <strong>🎯 Scoring Breakdown (25 marks):</strong><br>
+                    • <strong>Introduction (5 marks):</strong> Clear purpose and importance statement<br>
+                    • <strong>Process Steps (12 marks):</strong> All 6 phases described (2 marks each)<br>
+                    • <strong>Time Connectors (4 marks):</strong> Appropriate transitions (Initially, Subsequently, etc.)<br>
+                    • <strong>Conclusion (4 marks):</strong> Cyclical nature and summary<br><br>
+                    
+                    <strong>Key Time Connectors to Use:</strong><br>
+                    Initially, First, To begin with, Subsequently, Following this, Next, After this, Then, Finally, In conclusion
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 5 – Graph Description (25 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Answer (200-250 words):</strong><br><br>
+                    
+                    The table illustrates global smartphone sales by operating system from 2020 to 2024, showing market share percentages for Android, iOS, and other platforms over a five-year period.<br><br>
+                    
+                    <span class="keyword">Android demonstrates a declining trend</span>, decreasing from 71% in 2020 to 64% in 2024, representing a 7 percentage point drop. This downward trajectory shows consistent year-on-year decreases of approximately 1-2 percentage points.<br><br>
+                    
+                    <span class="keyword">Conversely, iOS exhibits steady growth</span>, rising from 27% in 2020 to 34% in 2024. This represents a 7 percentage point increase, with the most significant gains occurring in 2023-2024, where iOS captured 2 percentage points annually.<br><br>
+                    
+                    <span class="keyword">Other operating systems remained relatively stable</span>, fluctuating between 2-3% throughout the period, with minimal impact on the overall market dynamics.<br><br>
+                    
+                    <span class="keyword">The data reveals a clear market shift</span> where iOS is gaining ground at Android's expense. While Android maintains its dominant position with nearly two-thirds market share, the gap is narrowing considerably. This trend suggests increasing consumer preference for iOS devices, possibly due to factors such as brand loyalty, ecosystem integration, or premium device appeal. The consistent nature of these changes indicates a sustained market transition rather than temporary fluctuations.
+                </div>
+
+                <div class="scoring-guide">
+                    <strong>🎯 Scoring Breakdown (25 marks):</strong><br>
+                    • <strong>Introduction (5 marks):</strong> Data type, time period, what is measured<br>
+                    • <strong>Trend Analysis (10 marks):</strong> Android decline, iOS growth, Others stability<br>
+                    • <strong>Specific Data (5 marks):</strong> Actual percentages and changes<br>
+                    • <strong>Conclusion (5 marks):</strong> Market implications and significance<br><br>
+                    
+                    <strong>Essential Vocabulary:</strong><br>
+                    Trends: increasing, decreasing, rising, falling, fluctuating, stable<br>
+                    Data: percentage points, market share, year-on-year, consistently<br>
+                    Comparisons: conversely, while, whereas, in contrast
+                </div>
+            </div>
+        </div>
+
+        <!-- PAPER 2 ANSWERS -->
+        <div class="answer-section" id="answers2">
+            <h2 style="text-align: center; color: #e74c3c;">📋 Paper 2 - Business Communication - Answer Key</h2>
+            
+            <div class="question-block">
+                <h3>Question 1A – Reading Comprehension: Remote Work (15 marks)</h3>
+                
+                <p><strong>1. According to the passage, what triggered the widespread adoption of remote work?</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> The COVID-19 pandemic</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> First sentence: "The COVID-19 pandemic accelerated the adoption of remote work arrangements."
+                </div>
+
+                <p><strong>2. What percentage of remote workers report increased efficiency?</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> 77%</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Direct quote: "77% reporting increased efficiency when working from home."
+                </div>
+
+                <p><strong>3. The phrase "global talent pool" means:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Available skilled workers worldwide</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Context: "access a global talent pool without geographical constraints, enabling them to recruit the best candidates regardless of location."
+                </div>
+
+                <p><strong>4. What challenge is NOT mentioned in the passage?</strong></p>
+                <div class="answer"><span class="mcq-answer">d)</span> Higher salary costs</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> The passage mentions communication barriers, security risks, and reduced team cohesion, but not salary costs.
+                </div>
+
+                <p><strong>5. The success of remote work depends on all EXCEPT:</strong></p>
+                <div class="answer"><span class="mcq-answer">d)</span> Office location</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> The passage states success depends on "organizational culture, employee discipline, and technological capabilities" - not office location.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 1B – Short Answer Questions (10 marks)</h3>
+                
+                <p><strong>6. List three advantages of remote work mentioned in the passage. (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    1. <span class="keyword">Reduced overhead costs</span> for companies<br>
+                    2. <span class="keyword">Improved work-life balance</span> for employees<br>
+                    3. <span class="keyword">Access to global talent pool</span> without geographical constraints
+                </div>
+
+                <p><strong>7. What adaptations must managers and organizations make for successful remote work implementation? (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    • Managers must <span class="keyword">adapt their leadership styles</span> to effectively supervise distributed teams<br>
+                    • Organizations need to <span class="keyword">invest in robust digital infrastructure and cybersecurity measures</span>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 2 – Summary Writing (15 marks)</h3>
+                
+                <div class="answer">
+                    <strong>✅ Correct Answers:</strong><br>
+                    1. evolved, 2. technologies, 3. Social, 4. engagement, 5. personalized<br>
+                    6. Influencer, 7. recommendations, 8. privacy, 9. privacy
+                </div>
+                
+                <div class="method">
+                    <strong>🎯 Summary Writing Strategy:</strong><br>
+                    1. Identify the main themes in each paragraph<br>
+                    2. Look for key terminology that fits grammatically<br>
+                    3. Ensure the summary maintains logical flow<br>
+                    4. Check that all major points are covered
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 3 – Process Description: Customer Service (20 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Answer:</strong><br><br>
+                    
+                    The Customer Service Complaint Resolution Process is a systematic approach designed to address customer concerns efficiently and maintain satisfaction. This structured process ensures consistent handling of complaints while protecting the organization's reputation.<br><br>
+                    
+                    <span class="keyword">Initially</span>, Complaint Receipt involves logging the customer's concern through various channels such as phone, email, or online forms. Customer service representatives document all relevant details including contact information, issue description, and urgency level.<br><br>
+                    
+                    <span class="keyword">Subsequently</span>, Initial Assessment determines the complaint's severity, complexity, and required resources. Supervisors categorize issues and assign appropriate priority levels based on potential impact and resolution timeframes.<br><br>
+                    
+                    <span class="keyword">Following this</span>, Investigation involves gathering detailed information from relevant departments, reviewing policies, and analyzing the root cause. Team members collect evidence and interview stakeholders to understand the situation completely.<br><br>
+                    
+                    <span class="keyword">Next</span>, Solution Development creates appropriate remedies based on investigation findings. Teams consider company policies, customer expectations, and available resources to formulate fair resolutions.<br><br>
+                    
+                    <span class="keyword">Then</span>, Implementation involves executing the agreed solution and communicating outcomes to the customer. Staff members ensure proper documentation and obtain customer acknowledgment of resolution.<br><br>
+                    
+                    <span class="keyword">Finally</span>, Follow-up confirms customer satisfaction and prevents recurrence. This ongoing monitoring helps maintain service quality and identifies improvement opportunities for future cases.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 4 – Email Writing (20 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Email:</strong><br><br>
+                    
+                    <strong>Subject:</strong> Formal Complaint Regarding Technical Writing Workshop - Student ID: [Your ID]<br><br>
+                    
+                    Dear Workshop Coordinator,<br><br>
+                    
+                    I am writing to express my dissatisfaction with the Technical Writing workshop I attended on [Date]. As a SLIIT student, I had high expectations for this professional development session, but unfortunately, several significant issues compromised the learning experience.<br><br>
+                    
+                    <span class="keyword">Firstly</span>, the presentation started 30 minutes late without prior notification, reducing our valuable learning time and affecting other scheduled commitments. <span class="keyword">Secondly</span>, the materials provided were outdated and contained obsolete information that does not reflect current industry standards. <span class="keyword">Most importantly</span>, the promised practical exercises were completely omitted, which were a primary reason for my attendance.<br><br>
+                    
+                    These issues significantly impacted the workshop's educational value and my learning objectives. I kindly request that you address these concerns by improving workshop punctuality, updating learning materials, and ensuring all advertised components are delivered as promised.<br><br>
+                    
+                    I would appreciate a formal response regarding steps being taken to prevent similar issues in future workshops. Please feel free to contact me at [email] if you require additional feedback.<br><br>
+                    
+                    Thank you for your attention to this matter.<br><br>
+                    
+                    Sincerely,<br>
+                    [Your Name]<br>
+                    Student ID: [Your ID]<br>
+                    Email: [your.email@sliit.lk]
+                </div>
+
+                <div class="scoring-guide">
+                    <strong>🎯 Email Scoring Guide (20 marks):</strong><br>
+                    • <strong>Subject Line (2 marks):</strong> Clear, specific, professional<br>
+                    • <strong>Salutation (2 marks):</strong> Appropriate formal greeting<br>
+                    • <strong>Problem Statement (4 marks):</strong> Clear, professional tone<br>
+                    • <strong>Specific Details (6 marks):</strong> All three issues mentioned<br>
+                    • <strong>Request for Action (3 marks):</strong> Clear expectations<br>
+                    • <strong>Professional Closing (3 marks):</strong> Appropriate sign-off with contact info
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 5 – Graph Description: Employee Productivity (20 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br><br>
+                    
+                    The table presents employee productivity metrics across different work arrangements from Q1 to Q4 2024, comparing percentage productivity levels for remote workers, hybrid workers, and office workers.<br><br>
+                    
+                    <span class="keyword">Remote workers consistently demonstrate the highest productivity</span>, starting at 88% in Q1 and reaching 91% by Q4, showing a steady upward trend with a 3 percentage point increase over the year.<br><br>
+                    
+                    <span class="keyword">Hybrid workers show moderate performance</span>, beginning at 82% in Q1 and improving to 89% in Q4, representing a 7 percentage point increase and the largest improvement among all categories.<br><br>
+                    
+                    <span class="keyword">Office workers exhibit declining productivity</span>, starting at 78% in Q1 and decreasing to 75% in Q4, with Q3 showing the lowest performance at 74%.<br><br>
+                    
+                    The data reveals that flexible work arrangements correlate with higher productivity levels, with remote work maintaining consistent superiority throughout the year. This trend suggests that employee autonomy and flexibility positively impact performance outcomes.
+                </div>
+            </div>
+        </div>
+
+        <!-- PAPER 3 ANSWERS -->
+        <div class="answer-section" id="answers3">
+            <h2 style="text-align: center; color: #e74c3c;">📋 Paper 3 - Environmental Sustainability - Answer Key</h2>
+            
+            <div class="question-block">
+                <h3>Question 1A – Reading Comprehension: Renewable Energy (15 marks)</h3>
+                
+                <p><strong>1. What makes renewable energy increasingly competitive?</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Dramatic cost reductions</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "Solar and wind power have experienced dramatic cost reductions, making them increasingly competitive with fossil fuels."
+                </div>
+
+                <p><strong>2. The word "intermittent" means:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Stopping and starting irregularly</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Context clues indicate renewable sources don't provide constant energy - they stop and start based on weather conditions.
+                </div>
+
+                <p><strong>3. According to the passage, what requires substantial upgrades?</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> Grid infrastructure</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "Grid infrastructure requires substantial upgrades to accommodate distributed energy generation."
+                </div>
+
+                <p><strong>4. Many countries aim for net-zero emissions by:</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> 2050</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "many aiming for net-zero emissions by 2050."
+                </div>
+
+                <p><strong>5. The transition's success depends on all EXCEPT:</strong></p>
+                <div class="answer"><span class="mcq-answer">d)</span> Fossil fuel discovery</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Success depends on "technological innovation, supportive policy frameworks, and international cooperation" - not fossil fuel discovery.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 1B – Short Answer Questions (10 marks)</h3>
+                
+                <p><strong>6. Identify three implementation challenges mentioned in the passage. (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    1. <span class="keyword">Energy storage technology</span> must advance to address intermittent nature<br>
+                    2. <span class="keyword">Grid infrastructure</span> requires substantial upgrades<br>
+                    3. <span class="keyword">Political resistance</span> from established fossil fuel industries
+                </div>
+
+                <p><strong>7. What factors will determine the success of renewable energy transition? (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    Success depends on:<br>
+                    • <span class="keyword">Continued technological innovation</span><br>
+                    • <span class="keyword">Supportive policy frameworks</span><br>
+                    • <span class="keyword">International cooperation</span> to address climate change collectively
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 2 – Summary Writing (15 marks)</h3>
+                
+                <div class="answer">
+                    <strong>✅ Correct Answers:</strong><br>
+                    1. green, 2. carbon, 3. adoption, 4. charging, 5. Micro-mobility<br>
+                    6. alternatives, 7. incentives, 8. investment, 9. decarbonization
+                </div>
+                
+                <div class="method">
+                    <strong>🎯 Key Strategy:</strong> Focus on main themes - green revolution, electric vehicles, micro-mobility, government support, and climate goals.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 3 – Process Description: Solar Panel Installation (25 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Answer:</strong><br><br>
+                    
+                    Solar panel installation is a comprehensive process that transforms buildings into renewable energy generators. This systematic approach ensures safe, efficient, and code-compliant installations that maximize energy production.<br><br>
+                    
+                    <span class="keyword">Initially</span>, Site Assessment involves evaluating roof condition, sun exposure, and structural capacity. Engineers analyze factors such as roof angle, shading obstacles, and local weather patterns to determine optimal panel placement and system size.<br><br>
+                    
+                    <span class="keyword">Subsequently</span>, Permit Acquisition requires obtaining necessary approvals from local authorities and utility companies. This stage involves submitting detailed installation plans, electrical diagrams, and structural calculations for regulatory review.<br><br>
+                    
+                    <span class="keyword">Following approval</span>, Equipment Procurement involves ordering solar panels, inverters, mounting hardware, and electrical components. Quality specifications and delivery timelines are coordinated to ensure all materials arrive when needed.<br><br>
+                    
+                    <span class="keyword">Next</span>, Roof Preparation includes cleaning surfaces, marking installation points, and installing mounting rails according to engineering specifications. Technicians ensure proper waterproofing and structural integrity during this critical phase.<br><br>
+                    
+                    <span class="keyword">Then</span>, Panel Installation involves securing solar modules to mounting systems and connecting electrical wiring. Certified installers follow safety protocols while ensuring optimal positioning for maximum sunlight exposure.<br><br>
+                    
+                    <span class="keyword">Finally</span>, System Commissioning includes testing electrical connections, configuring monitoring systems, and obtaining final inspections. This completion phase ensures the solar installation operates safely and efficiently, providing clean energy for years to come.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 4 – Memo Writing: Green Campus 2025 (25 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Memo:</strong><br><br>
+                    
+                    <strong>MEMORANDUM</strong><br><br>
+                    
+                    <strong>TO:</strong> All Faculty and Staff<br>
+                    <strong>FROM:</strong> [Your Name], Environmental Coordinator<br>
+                    <strong>DATE:</strong> [Current Date]<br>
+                    <strong>SUBJECT:</strong> Introduction of Green Campus 2025 Sustainability Program<br><br>
+                    
+                    ___________________________________________________________________________<br><br>
+                    
+                    I am pleased to announce the launch of SLIIT's "Green Campus 2025" program, a comprehensive sustainability initiative designed to reduce our environmental footprint and promote eco-friendly practices across campus.<br><br>
+                    
+                    <strong>Key Initiatives:</strong><br><br>
+                    
+                    <span class="keyword">Energy Conservation:</span> All departments will implement LED lighting upgrades, programmable thermostats, and equipment shutdown protocols during non-operational hours.<br><br>
+                    
+                    <span class="keyword">Waste Reduction:</span> New recycling stations will be installed throughout campus, with mandatory separation of paper, plastic, and electronic waste. Single-use plastics will be eliminated from campus dining facilities.<br><br>
+                    
+                    <span class="keyword">Digital Documentation:</span> All departments must transition to paperless operations by implementing digital filing systems, electronic communications, and online document sharing platforms.<br><br>
+                    
+                    <strong>Implementation Timeline:</strong><br>
+                    Phase 1 (Month 1): Energy conservation measures<br>
+                    Phase 2 (Month 2): Waste reduction systems<br>
+                    Phase 3 (Month 3): Digital documentation transition<br><br>
+                    
+                    <strong>Expected Benefits:</strong> This program will reduce operational costs by approximately 15%, improve our environmental reputation, and create a healthier campus environment for our community.<br><br>
+                    
+                    <strong>Participation Requirements:</strong> All faculty and staff must attend mandatory sustainability training sessions scheduled for next week. Department heads will receive detailed implementation guidelines by Friday.<br><br>
+                    
+                    For questions or additional information, please contact me at env.coordinator@sliit.lk or extension 2847.<br><br>
+                    
+                    Thank you for your cooperation in making SLIIT a model for environmental responsibility.
+                </div>
+
+                <div class="scoring-guide">
+                    <strong>🎯 Memo Scoring Guide (25 marks):</strong><br>
+                    • <strong>Format (5 marks):</strong> Proper TO, FROM, DATE, SUBJECT headers<br>
+                    • <strong>Introduction (4 marks):</strong> Clear program announcement<br>
+                    • <strong>Key Initiatives (8 marks):</strong> All three initiatives described (energy, waste, digital)<br>
+                    • <strong>Timeline (3 marks):</strong> Clear implementation schedule<br>
+                    • <strong>Benefits & Requirements (3 marks):</strong> Expected outcomes and participation needs<br>
+                    • <strong>Contact Information (2 marks):</strong> Professional closing with contact details
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 5 – Graph Description: Renewable Energy by Region (10 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br><br>
+                    
+                    The table displays renewable energy adoption by region in 2024, showing the percentage distribution of solar, wind, hydro, and other renewable sources across North America, Europe, Asia, and other regions.<br><br>
+                    
+                    <span class="keyword">Wind energy dominates in Europe and North America</span>, accounting for 45% and 40% respectively, while <span class="keyword">solar energy leads in Asia</span> at 50%. <span class="keyword">Hydro power remains consistent</span> across regions at 18-25%, with other sources maintaining minimal presence at 5-7% globally.<br><br>
+                    
+                    The data reveals regional specialization in renewable technologies, likely reflecting geographical advantages and policy preferences in sustainable energy development.
+                </div>
+            </div>
+        </div>
+
+        <!-- PAPER 4 ANSWERS -->
+        <div class="answer-section" id="answers4">
+            <h2 style="text-align: center; color: #e74c3c;">📋 Paper 4 - Advanced Technical Communication - Answer Key</h2>
+            
+            <div class="question-block">
+                <h3>Question 1A – Reading Comprehension: Blockchain Technology (15 marks)</h3>
+                
+                <p><strong>1. Blockchain was originally developed for:</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> Cryptocurrencies</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "originally developed as the underlying infrastructure for cryptocurrencies."
+                </div>
+
+                <p><strong>2. What does "immutable" mean in the context of blockchain?</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> Unchangeable</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> Immutable means cannot be changed or altered - a key feature of blockchain records.
+                </div>
+
+                <p><strong>3. Bitcoin can process how many transactions per second?</strong></p>
+                <div class="answer"><span class="mcq-answer">a)</span> Seven</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "Bitcoin, for example, can process only seven transactions per second."
+                </div>
+
+                <p><strong>4. Which is NOT mentioned as a blockchain application?</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> Social media platforms</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> The passage mentions supply chain, healthcare, and financial services, but not social media.
+                </div>
+
+                <p><strong>5. The passage suggests that blockchain's future depends on:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Alternative consensus algorithms</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "ongoing research into alternative consensus algorithms and layer-two solutions promises to address current constraints."
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 1B – Short Answer Questions (10 marks)</h3>
+                
+                <p><strong>6. Explain two major challenges facing blockchain technology. (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    1. <span class="keyword">Scalability challenges:</span> Bitcoin can only process seven transactions per second compared to Visa's 24,000<br>
+                    2. <span class="keyword">Energy consumption:</span> Proof-of-work consensus mechanisms require substantial computational power
+                </div>
+
+                <p><strong>7. How does blockchain benefit supply chain management? (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    Blockchain benefits supply chain management by <span class="keyword">tracking products from origin to consumer, ensuring authenticity and preventing counterfeiting</span> through its immutable record-keeping system.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 2 – Summary Writing (15 marks)</h3>
+                
+                <div class="answer">
+                    <strong>✅ Correct Answers:</strong><br>
+                    1. transforms, 2. patterns, 3. accuracy, 4. quality, 5. discriminatory<br>
+                    6. Regulatory, 7. innovation, 8. healthcare, 9. implementation
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 3 – Process Description: Cybersecurity Incident Response (25 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Answer:</strong><br><br>
+                    
+                    The Cybersecurity Incident Response Process is a critical framework designed to minimize damage and restore normal operations when security breaches occur. This systematic approach ensures rapid containment while preserving evidence for investigation.<br><br>
+                    
+                    <span class="keyword">Initially</span>, Incident Detection involves identifying potential security threats through monitoring systems, user reports, or automated alerts. Security teams analyze anomalous behavior, suspicious network traffic, or system performance issues to confirm actual incidents.<br><br>
+                    
+                    <span class="keyword">Subsequently</span>, Initial Assessment determines the incident's scope, severity, and potential impact. Analysts classify the threat level, identify affected systems, and estimate business disruption to prioritize response efforts appropriately.<br><br>
+                    
+                    <span class="keyword">Following assessment</span>, Containment focuses on preventing further damage by isolating affected systems, blocking malicious network traffic, and implementing emergency security measures. Teams work quickly to limit the incident's spread while maintaining critical operations.<br><br>
+                    
+                    <span class="keyword">Next</span>, Investigation involves detailed forensic analysis to determine attack vectors, compromised data, and threat actor methods. Specialists collect digital evidence, analyze logs, and document findings for legal and remediation purposes.<br><br>
+                    
+                    <span class="keyword">Then</span>, Recovery includes restoring systems from clean backups, applying security patches, and validating system integrity. Teams gradually bring systems online while monitoring for residual threats or reinfection attempts.<br><br>
+                    
+                    <span class="keyword">Finally</span>, Post-Incident Review evaluates response effectiveness, identifies improvement opportunities, and updates security policies. This learning phase strengthens future incident response capabilities and prevents similar breaches.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 4 – Technical Email: LMS System Issues (25 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Email:</strong><br><br>
+                    
+                    <strong>Subject:</strong> URGENT: Critical LMS System Failures Affecting Online Lectures - Immediate Action Required<br><br>
+                    
+                    Dear Mr. [IT Director's Name],<br><br>
+                    
+                    I am writing to report critical system failures with our Learning Management System (LMS) that are significantly impacting academic operations and require immediate escalation.<br><br>
+                    
+                    <strong>Problem Description:</strong><br>
+                    The LMS platform has been experiencing frequent crashes during peak usage hours, particularly during scheduled online lectures. These failures occur approximately every 15-20 minutes during active sessions, causing complete system disconnection for all users. Error logs indicate memory overflow issues and database connection timeouts during high concurrent user loads.<br><br>
+                    
+                    <strong>Impact Assessment:</strong><br>
+                    This critical issue is severely affecting academic delivery with the following consequences:<br>
+                    • 150+ students per lecture session are being disconnected repeatedly<br>
+                    • Faculty members cannot complete scheduled teaching sessions<br>
+                    • Assessment submissions are being lost during system crashes<br>
+                    • Student learning experience and satisfaction are significantly compromised<br><br>
+                    
+                    <strong>Immediate Actions Recommended:</strong><br>
+                    1. Deploy emergency load balancing to distribute user traffic<br>
+                    2. Increase server memory allocation and database connection pools<br>
+                    3. Implement session backup mechanisms to prevent data loss<br>
+                    4. Schedule maintenance window for comprehensive system optimization<br><br>
+                    
+                    <strong>Resource Requirements:</strong><br>
+                    I request authorization to engage our external LMS vendor for emergency technical support and approval for temporary server capacity upgrades to handle current user demand.<br><br>
+                    
+                    Given the critical nature of this issue affecting daily academic operations, I recommend treating this as a Priority 1 incident requiring immediate resolution within 24 hours.<br><br>
+                    
+                    Please contact me at extension 3456 or j.smith@sliit.lk for any additional technical details or to discuss escalation procedures.<br><br>
+                    
+                    Best regards,<br><br>
+                    
+                    John Smith<br>
+                    IT Support Specialist<br>
+                    SLIIT Information Technology Department<br>
+                    Phone: +94 11 123 3456<br>
+                    Email: j.smith@sliit.lk
+                </div>
+
+                <div class="scoring-guide">
+                    <strong>🎯 Technical Email Scoring Guide (25 marks):</strong><br>
+                    • <strong>Subject Line (3 marks):</strong> Urgent, specific, action-oriented<br>
+                    • <strong>Professional Greeting (2 marks):</strong> Appropriate for senior management<br>
+                    • <strong>Problem Description (6 marks):</strong> Technical details, frequency, error indicators<br>
+                    • <strong>Impact Assessment (5 marks):</strong> Quantified academic impact<br>
+                    • <strong>Recommended Actions (4 marks):</strong> Specific technical solutions<br>
+                    • <strong>Resource Requests (3 marks):</strong> Clear escalation needs<br>
+                    • <strong>Professional Closing (2 marks):</strong> Complete contact information
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 5 – Data Analysis: Project Completion Rates (10 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br><br>
+                    
+                    The table compares software development project completion rates across four methodologies in 2024, showing on-time, delayed, and failed project percentages.<br><br>
+                    
+                    <span class="keyword">DevOps demonstrates superior performance</span> with 80% on-time completion and only 5% failure rate, followed closely by Agile at 75% on-time delivery. <span class="keyword">Waterfall shows the poorest results</span> with 60% on-time completion and highest failure rate at 10%. <span class="keyword">Hybrid methodology achieves moderate success</span> at 70% on-time completion.<br><br>
+                    
+                    The data suggests that flexible, iterative methodologies significantly outperform traditional linear approaches in project delivery success.
+                </div>
+            </div>
+        </div>
+
+        <!-- PAPER 5 ANSWERS -->
+        <div class="answer-section" id="answers5">
+            <h2 style="text-align: center; color: #e74c3c;">📋 Paper 5 - Contemporary Issues - Answer Key</h2>
+            
+            <div class="question-block">
+                <h3>Question 1A – Reading Comprehension: Digital Divide (20 marks)</h3>
+                
+                <p><strong>1. The "digital divide" refers to:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Inequalities in digital access</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "exposed significant inequalities in digital access, creating what educators term the 'digital divide.'"
+                </div>
+
+                <p><strong>2. According to the passage, disadvantaged students lack all EXCEPT:</strong></p>
+                <div class="answer"><span class="mcq-answer">d)</span> Academic motivation</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> The passage mentions lacking internet, devices, and study spaces, but not motivation.
+                </div>
+
+                <p><strong>3. Drive-in Wi-Fi zones are established in:</strong></p>
+                <div class="answer"><span class="mcq-answer">c)</span> School parking lots</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "Some schools have established drive-in Wi-Fi zones in parking lots."
+                </div>
+
+                <p><strong>4. Rural areas specifically need:</strong></p>
+                <div class="answer"><span class="mcq-answer">b)</span> Improved broadband coverage</div>
+                <div class="explanation">
+                    <strong>📖 Explanation:</strong> "Rural areas need improved broadband coverage."
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 1B – Short Answer Questions (10 marks)</h3>
+                
+                <p><strong>5. List four initiatives mentioned that help bridge the digital divide. (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    1. <span class="keyword">Device lending programs</span> (laptops and tablets)<br>
+                    2. <span class="keyword">Mobile hotspot distribution</span> for internet connectivity<br>
+                    3. <span class="keyword">Drive-in Wi-Fi zones</span> in school parking lots<br>
+                    4. <span class="keyword">Offline learning materials</span> for limited connectivity students
+                </div>
+
+                <p><strong>6. According to the passage, what does educational equity in the digital age depend on? (5 marks)</strong></p>
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br>
+                    Educational equity depends on <span class="keyword">not only access to technology but also the skills to use it effectively</span>, including digital literacy training for students and parents.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 2 – Summary Writing: AI Ethics (15 marks)</h3>
+                
+                <div class="answer">
+                    <strong>✅ Correct Answers:</strong><br>
+                    1. critical, 2. frameworks, 3. biases, 4. discriminatory, 5. governance<br>
+                    6. risk, 7. innovation, 8. collaborative, 9. policymakers
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 3 – Process Description: Online Course Development (20 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample High-Scoring Answer:</strong><br><br>
+                    
+                    Online Course Development is a systematic process for creating effective digital learning experiences. This structured approach ensures educational quality while maximizing student engagement and learning outcomes.<br><br>
+                    
+                    <span class="keyword">Initially</span>, Needs Analysis involves identifying target audience, learning objectives, and required competencies. Educational designers conduct surveys, interviews, and market research to understand learner requirements and institutional goals.<br><br>
+                    
+                    <span class="keyword">Subsequently</span>, Content Design creates the curriculum structure, learning modules, and assessment strategies. Instructional designers develop detailed course outlines, learning pathways, and evaluation criteria aligned with educational standards.<br><br>
+                    
+                    <span class="keyword">Following design approval</span>, Material Creation involves producing videos, interactive content, readings, and multimedia resources. Subject matter experts collaborate with media specialists to develop engaging educational materials.<br><br>
+                    
+                    <span class="keyword">Next</span>, Platform Setup configures the Learning Management System, uploads content, and establishes user access controls. Technical teams ensure proper navigation, responsive design, and integration with assessment tools.<br><br>
+                    
+                    <span class="keyword">Then</span>, Testing & Review involves pilot testing with sample learners, gathering feedback, and refining content based on usability studies. Quality assurance teams verify functionality, accessibility, and educational effectiveness.<br><br>
+                    
+                    <span class="keyword">Finally</span>, Launch & Monitoring implements the course publicly while continuously tracking student progress, engagement metrics, and learning outcomes for ongoing improvement.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 4 – Business Correspondence Choice (20 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Option A - Email Sample:</strong><br><br>
+                    
+                    <strong>Subject:</strong> Proposal for Mental Health Support Program Implementation at SLIIT<br><br>
+                    
+                    Dear Academic Director,<br><br>
+                    
+                    As Student Representative for the Class of 2025, I am writing to propose the implementation of a comprehensive mental health support program to address the growing wellness needs of our student community.<br><br>
+                    
+                    Recent student surveys indicate that 68% of students experience stress-related challenges affecting their academic performance. The proposed program would include professional counseling services, stress management workshops, and peer support networks to create a healthier learning environment.<br><br>
+                    
+                    <strong>Recommended Components:</strong><br>
+                    • On-campus counseling center with licensed therapists<br>
+                    • Weekly stress management and mindfulness workshops<br>
+                    • Peer mentor training programs<br>
+                    • 24/7 mental health helpline for crisis support<br><br>
+                    
+                    Implementation could begin with a pilot program next semester, with full rollout the following academic year. I would welcome the opportunity to discuss this proposal and provide additional student feedback data.<br><br>
+                    
+                    Thank you for considering this important initiative for student welfare.<br><br>
+                    
+                    Respectfully,<br>
+                    [Student Name]<br>
+                    Student Representative, Class of 2025<br>
+                    student.rep@sliit.lk
+                </div>
+
+                <div class="sample-answer">
+                    <strong>Option B - Memo Sample:</strong><br><br>
+                    
+                    <strong>MEMORANDUM</strong><br><br>
+                    
+                    <strong>TO:</strong> All Faculty Members<br>
+                    <strong>FROM:</strong> Dr. [Name], Head of IT Department<br>
+                    <strong>DATE:</strong> [Current Date]<br>
+                    <strong>SUBJECT:</strong> Migration to New Learning Management System - Training and Transition Schedule<br><br>
+                    
+                    ___________________________________________________________________________<br><br>
+                    
+                    SLIIT will be migrating to a new Learning Management System (LMS) to enhance online teaching capabilities and improve student learning experiences. This transition will occur during the semester break to minimize disruption to academic activities.<br><br>
+                    
+                    <strong>Training Schedule:</strong><br>
+                    Week 1: Basic platform orientation (mandatory for all faculty)<br>
+                    Week 2: Advanced features workshops (optional)<br>
+                    Week 3: Department-specific customization sessions<br>
+                    Week 4: Individual technical support and troubleshooting<br><br>
+                    
+                    <strong>Transition Timeline:</strong><br>
+                    Phase 1 (Month 1): Content migration and system testing<br>
+                    Phase 2 (Month 2): Faculty training and pilot courses<br>
+                    Phase 3 (Month 3): Full system deployment and student access<br><br>
+                    
+                    <strong>Support Resources:</strong><br>
+                    • Dedicated help desk: ext. 2890<br>
+                    • Online tutorial library: training.sliit.lk<br>
+                    • Peer mentoring program for technical assistance<br><br>
+                    
+                    All faculty must complete mandatory training by [Date] to ensure smooth transition. Please confirm your training session attendance with the IT Department by Friday.<br><br>
+                    
+                    For questions, contact the IT Help Desk at helpdesk@sliit.lk or extension 2890.
+                </div>
+            </div>
+
+            <div class="question-block">
+                <h3>Question 5 – Graph Description: Learning Preferences (15 marks)</h3>
+                
+                <div class="sample-answer">
+                    <strong>Sample Answer:</strong><br><br>
+                    
+                    The table shows student learning preferences post-pandemic in 2024, comparing undergraduate and graduate student preferences across three learning modes: fully online, hybrid, and fully in-person.<br><br>
+                    
+                    <span class="keyword">Undergraduate students favor hybrid learning</span> at 45%, while preferring in-person (30%) over fully online (25%) options. <span class="keyword">Graduate students show stronger preference for online learning</span> at 40%, with hybrid and in-person options at 35% and 25% respectively.<br><br>
+                    
+                    The data reveals that <span class="keyword">flexible learning modes dominate both groups</span>, with traditional fully in-person instruction being least preferred, indicating lasting pandemic impacts on educational delivery preferences.
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY TIPS SECTION -->
+        <div class="tip-box" style="margin-top: 40px;">
+            <h3>🎯 Final Exam Success Tips</h3>
+            <strong>Time Management:</strong> Practice with timer - 25 min reading comprehension, 20 min summary, 30 min process, 25 min graph, 20 min correspondence<br><br>
+            <strong>Reading Comprehension:</strong> Read questions first, then passage. Look for keywords and context clues.<br><br>
+            <strong>Process Description:</strong> Always include introduction, use time connectors, describe each step clearly, and write a conclusion.<br><br>
+            <strong>Graph Description:</strong> Start with overview, identify trends, use specific data, and conclude with implications.<br><br>
+            <strong>Business Writing:</strong> Follow proper format, be professional, include all required elements, and proofread carefully.
+        </div>
+
+    </div>
+
+    <script>
+        function showAnswers(paperNum) {
+            // Hide all answer sections
+            const sections = document.querySelectorAll('.answer-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Hide all nav buttons active state
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected answer section
+            document.getElementById(`answers${paperNum}`).classList.add('active');
+            
+            // Activate corresponding nav button
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
